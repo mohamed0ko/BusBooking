@@ -13,10 +13,8 @@ return new class extends Migration
     {
         Schema::create('buses', function (Blueprint $table) {
             $table->id();
-
             $table->unsignedBigInteger('company_id');
             $table->foreign('company_id')->references('id')->on('bus_companies')->cascadeOnDelete();
-
             $table->integer('numberBus');
             $table->integer('seats');
             $table->json('comforts')->nullable();
