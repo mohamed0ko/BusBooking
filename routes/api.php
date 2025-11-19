@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\BusCompanyController;
 use App\Http\Controllers\CityController;
+use App\Http\Resources\BusCompany\BusCompanyCollection;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -24,4 +26,5 @@ Route::get('/token', function () {
 Route::middleware('auth:sanctum')->group(function () {
 
     Route::apiResource('cities', CityController::class);
+    Route::apiResource('busCompanies', BusCompanyController::class);
 });

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\City;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CreateCityRequest extends FormRequest
+class UpdateCityRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,7 +22,7 @@ class CreateCityRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'City_name' => 'sometimes|string|max:50'
+            'city_name' => 'sometimes|string|max:50'
         ];
     }
 }

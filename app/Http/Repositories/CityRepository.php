@@ -15,8 +15,9 @@ class CityRepository implements CityRepositoryInterface
         // return City::with(['tripsFrom', 'tripsTo'])->get();
         return City::all();
     }
-    public function getById(City $city)
+    public function getById($id)
     {
+        $city = City::findOrFail($id);
         return $city;
     }
     public function create(array $data)

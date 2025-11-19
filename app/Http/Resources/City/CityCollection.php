@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Resources;
+namespace App\Http\Resources\City;
 
+use App\Http\Resources\City\CityResource;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\ResourceCollection;
 

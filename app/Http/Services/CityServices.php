@@ -20,9 +20,9 @@ class CityServices
         return $this->cityRepo->getAll();
     }
 
-    public function getById(City $city)
+    public function getById($id)
     {
-        return $this->cityRepo->getById($city);
+        return $this->cityRepo->getById($id);
     }
 
     public function create($data)

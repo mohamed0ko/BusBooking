@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\CreateCityRequest;
-use App\Http\Requests\UpdateCityRequest;
-use App\Http\Resources\CityCollection;
-use App\Http\Resources\CityResource;
+use App\Http\Requests\City\CreateCityRequest;
+use App\Http\Requests\City\UpdateCityRequest;
+use App\Http\Resources\City\CityCollection;
+use App\Http\Resources\City\CityResource;
+
 use App\Http\Services\CityServices;
 use App\Models\City;
 use Illuminate\Http\Request;
@@ -44,9 +45,9 @@ class CityController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(City $city)
+    public function show($id)
     {
-        return new CityResource($this->cityServices->getById($city));
+        return new CityResource($this->cityServices->getById($id));
     }
 
     /**
@@ -63,6 +64,7 @@ class CityController extends Controller
     public function update(UpdateCityRequest $request, City $city,)
     {
         $city = $this->cityServices->update($request->validated(), $city);
+        return new CityResource($city);
     }
 
     /**

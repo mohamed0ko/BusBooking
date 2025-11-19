@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Resources;
+namespace App\Http\Resources\City;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
@@ -16,9 +16,9 @@ class CityResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'City_name' => $this->City_name,
-            'create_at' => $this->create_at,
-            'update_at' => $this->update_at,
+            'city_name' => $this->city_name,
+            'created_at' => $this->created_at,
+            'updated_at' => $this->updated_at,
 
         ];
     }

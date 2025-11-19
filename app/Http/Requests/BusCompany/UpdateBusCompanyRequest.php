@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\BusCompany;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateCityRequest extends FormRequest
+class UpdateBusCompanyRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,7 +22,8 @@ class UpdateCityRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'City_name' => 'sometimes|string|max:50'
+            'company_name' => 'sometimes|string|max:50',
+            'image' => 'image|mimes:jpeg,png,jpg,gif|max:50048'
         ];
     }
 }
