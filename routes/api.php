@@ -3,6 +3,7 @@
 use App\Http\Controllers\BusCompanyController;
 use App\Http\Controllers\BusController;
 use App\Http\Controllers\CityController;
+use App\Http\Controllers\TripController;
 use App\Http\Resources\BusCompany\BusCompanyCollection;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -29,4 +30,5 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('cities', CityController::class);
     Route::apiResource('busCompanies', BusCompanyController::class);
     Route::apiResource('buses', BusController::class);
+    Route::apiResource('trips', TripController::class);
 });

@@ -22,10 +22,10 @@ class CreateBusRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'company_id' => 'required|integer',
-            'numberBus' => 'required|integer',
-            'seats' => 'required|integer',
-            'comforts' => 'array'
+            'company_id' => 'required|integer|exists:bus_companies,id',
+            'numberBus'  => 'required|integer',
+            'seats'      => 'required|integer',
+            'comforts'   => 'array'
         ];
     }
 }
