@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BusCompanyController;
+use App\Http\Controllers\BusController;
 use App\Http\Controllers\CityController;
 use App\Http\Resources\BusCompany\BusCompanyCollection;
 use App\Models\User;
@@ -27,4 +28,5 @@ Route::middleware('auth:sanctum')->group(function () {
 
     Route::apiResource('cities', CityController::class);
     Route::apiResource('busCompanies', BusCompanyController::class);
+    Route::apiResource('buses', BusController::class);
 });

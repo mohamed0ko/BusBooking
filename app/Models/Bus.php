@@ -12,7 +12,7 @@ class Bus extends Model
         'comforts' => 'array'
     ];
 
-    public function Company()
+    public function BusCompany()
     {
         return $this->belongsTo(BusCompany::class, 'company_id');
     }
