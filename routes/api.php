@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookingController;
 use App\Http\Controllers\BusCompanyController;
 use App\Http\Controllers\BusController;
 use App\Http\Controllers\CityController;
@@ -31,4 +32,5 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('busCompanies', BusCompanyController::class);
     Route::apiResource('buses', BusController::class);
     Route::apiResource('trips', TripController::class);
+    Route::apiResource('bookings', BookingController::class);
 });
